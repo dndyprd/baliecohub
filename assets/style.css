@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
+:root{
+    --white: #f1f5fc;
+    --black: #0e0e12;
+    --primary: #007A55;
+    --primary-hover: #006045;
+    --secondary: #013529;
+    --tertiary: #2B7FFF;
+    --tertiary-hover: #155DFC;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: "Funnel Display", sans-serif;
+}
+
+/* Button */
+.btn{
+    padding: 8px 20px;
+    border-radius: 16px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    transition: 100ms all ease-in-out;
+}
+
+.btn:hover{
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+/* Aksen Judul */
+.aksen{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.aksen span{
+    background: var(--primary);
+    height: 2px;
+    width: 48px;
+    border-radius: 2px;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: calc(100vw - 128px);
+    z-index: 90;
+    padding: 12px 64px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Navbar - Logo */
+.navbar .logo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar .logo span{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.navbar .logo img{
+    width: 100%;
+    max-width: 36px;
+    background: var(--primary);
+    border-radius: 100%;
+    padding: 6px;
+}
+
+/* Navbar - List Item */
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    list-style: none;
+}
+
+.navbar ul li a{
+    color: var(--black);
+}
+
+.navbar ul li a:hover{
+    color: var(--secondary);
+}
+
+.navbar ul li a::after{
+    content: '';
+    display: block;
+    background: var(--primary);
+    width: 0;
+    height: 2px;
+    margin-top: 4px;
+    transition: 200ms all ease-in-out;
+}
+
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+
+.navbar ul li a.active{
+    color: var(--primary);
+}
+
+.navbar ul li a.active:hover{
+    color: var(--primary-hover);
+}
+
+/* Beranda */
+.beranda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    height: 100vh;
+    padding: 0 96px;
+    gap: 36px;
+}
+
+.beranda h1{
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--primary);
+}
+
+.beranda h3{
+    font-size: 48px;
+    color: var(--black);
+    margin: 8px 0;
+}
+
+.beranda h3 span{
+    color: var(--primary);
+}
+
+.beranda p{
+    text-align: justify;
+    color: var(--black);
+    margin: 16px 0;
+    font-size: 18px;
+    max-width: 40vw;
+}
+
+/* Beranda - Button */
+.beranda .btn-group{
+    display: flex;
+    font-weight: 500;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.beranda .btn-group .btn{
+    padding: 12px 28px;
+}
+
+.beranda .btn-group .btn-secondary{
+    background: var(--primary);
+    color: var(--white);
+}
+
+.beranda .btn-group .btn-secondary:hover{
+    background: var(--primary-hover);
+    color: var(--white);
+    border-color: var(--primary-hover);
+}
