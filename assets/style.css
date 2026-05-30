@@ -2,6 +2,7 @@
 
 :root{
     --white: #f1f5fc;
+    --gray: #dee6f4;
     --black: #0e0e12;
     --primary: #007A55;
     --primary-hover: #006045;
@@ -16,6 +17,16 @@
     text-decoration: none;
     font-family: "Funnel Display", sans-serif;
 }
+
+body {
+    color: var(--black);
+}
+
+.bg-green{ background: var(--primary); color: var(--white); }
+.bg-blue { background: var(--tertiary); color: var(--white); }
+
+.text-green { color: var(--primary); }
+.text-blue { color: var(--tertiary); }
 
 /* Button */
 .btn{
@@ -121,38 +132,48 @@
 }
 
 /* Beranda */
-.beranda{
-    display: flex;
-    justify-content: center;
+.beranda {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
     align-items: center;
     background: var(--white);
-    height: 100vh;
+    min-height: 100vh;
     padding: 0 96px;
-    gap: 36px;
+    gap: 48px;
+    overflow: hidden;
 }
 
-.beranda h1{
-    font-size: 24px;
-    font-weight: 300;
+/* Beranda - Content */
+.beranda .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.beranda .content h1 {
+    font-size: 20px;
+    font-weight: 500;
     color: var(--primary);
 }
 
-.beranda h3{
-    font-size: 48px;
+.beranda .content h3 {
+    font-size: 60px;
+    font-weight: 800;
     color: var(--black);
-    margin: 8px 0;
-}
-
-.beranda h3 span{
-    color: var(--primary);
-}
-
-.beranda p{
-    text-align: justify;
-    color: var(--black);
+    line-height: 1.1;
     margin: 16px 0;
+}
+
+.beranda .content h3 span {
+    color: var(--primary);
+}
+
+.beranda .content p {
+    color: var(--black);
+    margin: 4px 0 36px 0;
     font-size: 18px;
-    max-width: 40vw;
+    line-height: 1.6;
+    max-width: 90%;
 }
 
 /* Beranda - Button */
@@ -160,20 +181,148 @@
     display: flex;
     font-weight: 500;
     gap: 12px;
-    margin-top: 32px;
 }
 
 .beranda .btn-group .btn{
-    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px 12px 24px;
 }
 
 .beranda .btn-group .btn-secondary{
     background: var(--primary);
     color: var(--white);
+    animation-delay: 2s;
 }
 
 .beranda .btn-group .btn-secondary:hover{
     background: var(--primary-hover);
     color: var(--white);
     border-color: var(--primary-hover);
+}
+
+/* Beranda - Image Stats Wrapper */
+.hero-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+}
+
+.hero-image-wrapper .main-img {
+    object-fit: cover;
+    width: 90%;
+    height: 70vh;
+    border-radius: 20px 80px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* All Floating Cards */
+.floating-card {
+    position: absolute;
+    background: var(--white);
+    border: var(--gray) solid 2px;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Stats Card */
+.stats-card {
+    bottom: 5%;
+    right: -5%;
+    width: 260px;
+    animation: float1 4s ease-in-out infinite;
+}
+
+.stats-card h5 {
+    font-size: 16px;
+    color: var(--black);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.stat-item:last-child {
+    margin-bottom: 0;
+}
+
+.stat-item .icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.stat-info h6 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.stat-info span {
+    font-size: 13px;
+    color: #888;
+}
+
+.stat-value {
+    margin-left: auto;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+/* User Card */
+.user-card {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    top: 10%;
+    left: -5%;
+    gap: 16px;
+    padding: 16px 24px;
+    animation: float2 4s ease-in-out infinite;
+}
+
+.user-card .user-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.user-info h6 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.user-info span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes float1 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes float2 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
 }
