@@ -1,0 +1,368 @@
+
+.beranda {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    align-items: center;
+    background: var(--white);
+    min-height: 100vh;
+    padding: 0 96px;
+    gap: 48px;
+    overflow: hidden;
+}
+
+/* Beranda - Content */
+.beranda .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.beranda .content h1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.beranda .content h3 {
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--black);
+    line-height: 1.1;
+    margin: 16px 0;
+}
+
+.beranda .content h3 span {
+    color: var(--primary);
+}
+
+.beranda .content p {
+    color: var(--black);
+    margin: 4px 0 36px 0;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+/* Beranda - Button */
+.beranda .btn-group{
+    display: flex;
+    font-weight: 500;
+    gap: 12px;
+}
+
+.beranda .btn-group .btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px 12px 24px;
+}
+
+.beranda .btn-group .btn-secondary{
+    background: var(--primary);
+    color: var(--white);
+    animation-delay: 2s;
+}
+
+.beranda .btn-group .btn-secondary:hover{
+    background: var(--primary-hover);
+    color: var(--white);
+    border-color: var(--primary-hover);
+}
+
+/* Beranda - Image Stats Wrapper */
+.hero-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 95%;
+    border-radius: 40px;
+}
+
+.hero-image-wrapper .main-img {
+    object-fit: cover;
+    width: 90%;
+    height: 70vh;
+    border-radius: 20px 80px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Stats Card */
+.stats-card {
+    bottom: 5%;
+    right: -5%;
+    width: 260px;
+    animation: float1 4s ease-in-out infinite;
+}
+
+.stats-card h5 {
+    font-size: 16px;
+    color: var(--black);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.stat-item:last-child {
+    margin-bottom: 0;
+}
+
+.stat-item .icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.stat-info h6 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.stat-info span {
+    font-size: 13px;
+    color: #888;
+}
+
+.stat-value {
+    margin-left: auto;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+/* User Card */
+.user-card {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    top: 15%;
+    left: -5%;
+    gap: 16px;
+    padding: 16px 24px;
+    animation: float2 4s ease-in-out infinite;
+}
+
+.user-card .user-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.user-info h6 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.user-info span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Desktop Responsive */
+@media (min-width: 1400px) {
+    .beranda {
+        padding: 0 120px;
+        gap: 64px;
+    }
+
+    .beranda .content h3 {
+        font-size: 68px;
+    }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .beranda {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 48px;
+        gap: 32px;
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 48px;
+    }
+
+    .beranda .content h3 {
+        font-size: 48px;
+    }
+
+    .beranda .content p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .hero-image-wrapper .main-img {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .stats-card {
+        width: 220px;
+    }
+
+    .stats-card h5 {
+        font-size: 14px;
+    }
+
+    .stat-item {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .stat-item .icon-wrap {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .stat-info h6 {
+        font-size: 14px;
+    }
+
+    .stat-value {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .beranda {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 24px;
+        min-height: auto;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    .beranda .content h1 {
+        font-size: 16px;
+    }
+
+    .beranda .content h3 {
+        font-size: 32px;
+        margin: 12px 0;
+    }
+
+    .beranda .content p {
+        font-size: 14px;
+        margin: 12px 0 24px 0;
+        max-width: 100%;
+    }
+
+    .beranda .btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .beranda .btn-group .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 20px;
+    }
+
+    .hero-image-wrapper {
+        height: auto;
+        position: relative;
+    }
+
+    .hero-image-wrapper .main-img {
+        width: 100%;
+        height: 35vh;
+        border-radius: 16px;
+    }
+
+    /* Floating cards repositioned for mobile */
+    .stats-card {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-top: 20px;
+        animation: none;
+    }
+
+    .user-card {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-top: 20px;
+        animation: none;
+    }
+
+    .stats-card h5 {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .stat-item {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .stat-item .icon-wrap {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+        flex-shrink: 0;
+    }
+
+    .stat-info h6 {
+        font-size: 13px;
+    }
+
+    .stat-value {
+        font-size: 14px;
+    }
+
+    .user-card .user-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+
+    .user-info h6 {
+        font-size: 16px;
+    }
+
+    .user-info span {
+        font-size: 12px;
+    }
+}
+
+/* Extra small mobile (< 480px) */
+@media (max-width: 480px) {
+    .beranda {
+        padding: 0 16px;
+        padding-top: 70px;
+    }
+
+    .beranda .content h3 {
+        font-size: 28px;
+    }
+
+    .beranda .content p {
+        font-size: 13px;
+    }
+
+    .hero-image-wrapper .main-img {
+        height: 30vh;
+    }
+}
