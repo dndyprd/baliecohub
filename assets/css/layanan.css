@@ -1,0 +1,178 @@
+.layanan {
+    padding: 64px 96px;
+}
+
+.layanan .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-hover), var(--secondary));
+    padding: 64px 64px 80px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.layanan .container .aksen {
+    color: var(--white);
+}
+
+.layanan .container h2 {
+    color: var(--white);
+    font-size: 36px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+/* Layanan Card */
+.layanan-cards {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: stretch;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card Biasa */
+.layanan .card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: rgba(1, 53, 41, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 20px;
+    padding: 32px 28px 28px;
+    border-radius: 20px;
+    transition: 300ms ease;
+}
+
+.layanan .card:hover {
+    transform: translateY(-4px);
+    background: rgba(1, 53, 41, 0.85);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Featured Card */
+.layanan .card-featured {
+    background: var(--white);
+    border: none;
+    transform: translateY(-8px);
+}
+
+.layanan .card-featured:hover {
+    background: var(--white);
+    transform: translateY(-12px);
+}
+
+/* Icon */
+.card-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    font-size: 22px;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: 300ms ease;
+}
+
+.layanan .card:hover .card-icon-wrap {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.layanan .card-featured .card-icon-wrap {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+}
+
+.layanan .card-featured:hover .card-icon-wrap {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+/* Content */
+.card-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 4px;
+}
+
+.layanan .card-featured .card-badge {
+    color: var(--primary);
+}
+
+.layanan .card h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;
+    margin: 0;
+}
+
+.layanan .card-featured h3 {
+    color: var(--secondary);
+}
+
+.layanan .card h5 {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 4px 0;
+}
+
+.layanan .card-featured h5 {
+    color: var(--primary);
+}
+
+.layanan .card p {
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 8px;
+    flex: 1;
+}
+
+.layanan .card-featured p {
+    color: #4a5568;
+}
+
+/* Card Button */
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    gap: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 12px 24px;
+    transition: 250ms ease;
+}
+
+.card-link:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: var(--white);
+}
+
+.layanan .card-featured .card-link {
+    background: var(--primary);
+    border-color: transparent;
+    color: var(--white);
+}
+
+.layanan .card-featured .card-link:hover {
+    background: var(--primary-hover);
+    border-color: transparent;
+}

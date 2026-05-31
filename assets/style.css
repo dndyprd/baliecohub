@@ -3,6 +3,7 @@
 @import url('css/home.css');
 @import url('css/about.css');
 @import url('css/mitra.css');
+@import url('css/layanan.css');
 
 
 :root{
@@ -32,6 +33,7 @@ body {
     background: var(--white);
 }
 
+.bg-white { background: var(--white) !important; }
 .bg-green{ background: var(--primary); color: var(--white); }
 .bg-emerald { background: var(--secondary); color: var(--white); }
 
@@ -92,4 +94,18 @@ body {
     0% { transform: translateY(0); }
     50% { transform: translateY(7px); }
     100% { transform: translateY(0); }
+}
+
+@keyframes rotateLeft {
+    0% { transform: rotate(0); }
+    70% { transform: rotate(0deg); }
+    85% { transform: rotate(-1deg); }
+    100% { transform: rotate(0); }
+}
+
+@keyframes rotateRight {
+    0% { transform: rotate(0); }
+    70% { transform: rotate(0deg); }
+    85% { transform: rotate(1deg); }
+    100% { transform: rotate(0); }
 }

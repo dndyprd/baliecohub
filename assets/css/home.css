@@ -1,4 +1,3 @@
-
 .beranda {
     display: grid;
     grid-template-columns: 1.25fr 1fr;
@@ -80,12 +79,13 @@
     border-radius: 40px;
 }
 
-.hero-image-wrapper .main-img {
+.hero-image-wrapper img {
     object-fit: cover;
     width: 90%;
     height: 70vh;
     border-radius: 20px 80px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    animation: rotateRight 6s ease-in-out infinite;
 }
 
 /* Stats Card */
