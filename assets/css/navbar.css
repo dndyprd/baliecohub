@@ -151,7 +151,19 @@
 }
 
 .dropdown-menu li a:hover {
+    color: var(--primary) !important;
+}
+
+.navbar .action-btn{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar .darkmode-btn{
     color: var(--primary);
+    cursor: pointer;
+    font-size: 28px;
 }
 
 /* Desktop Responsive */

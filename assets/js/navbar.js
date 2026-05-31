@@ -117,10 +117,26 @@
   }
 
 
+  // DARKMODE TOGGLE
+  function initDarkMode() {
+    const $btn = $(".darkmode-btn");
+
+    $btn.on("click", function () {
+      $("body").toggleClass("dark");
+      
+      if ($("body").hasClass("dark")) {
+        $btn.html('<i class="fa-solid fa-cloud-sun"></i>');
+      } else {
+        $btn.html('<i class="fa-solid fa-cloud-moon"></i>');
+      }
+    });
+  }
+
   $(function () {
     updateNavbarActive();
     updateActiveLink();
     initDropdown();
+    initDarkMode();
 
     $window.on("scroll", onScroll);
     $window.on("resize", updateActiveLink);
