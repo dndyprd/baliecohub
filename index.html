@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BaliEco Hub</title>
     <link rel="icon" href="assets/img/logo.png" type="image/png">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
 </head>
 
@@ -25,8 +25,19 @@
             <li>
                 <a href="#tentang-kami">Tentang Kami</a>
             </li>
-            <li>
-                <a href="#layanan">Layanan</a>
+            <li class="has-dropdown">
+                <a href="#layanan">Layanan <i class="fa-solid fa-chevron-down dropdown-chevron"></i></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="layanan/ecoreport.html">Eco-Report</a>
+                    </li>
+                    <li>
+                        <a href="layanan/dropoff.html">Drop-Off Stations</a>
+                    </li>
+                    <li>
+                        <a href="layanan/ecomarket.html">Eco-Market</a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="#blog">Blog</a>
@@ -249,7 +260,8 @@
     <script src="lib/parallaxjs/parallax.js"></script>
     <script src="lib/fontawesome/js/all.min.js"></script>
 
-    <script src="assets/index.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>

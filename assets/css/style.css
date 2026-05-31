@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
-@import url('css/navbar.css');
-@import url('css/home.css');
-@import url('css/about.css');
-@import url('css/mitra.css');
-@import url('css/layanan.css');
+@import url('navbar.css');
+@import url('home.css');
+@import url('about.css');
+@import url('mitra.css');
+@import url('layanan.css');
 
 
 :root{
