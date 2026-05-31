@@ -20,18 +20,16 @@
 .about .content .aksen h3 {
     font-size: 14px;
     font-weight: 700;
-    color: var(--primary);
     margin: 0;
     letter-spacing: 2px;
 }
 
 .about .content h2 {
-    font-size: 48px;
+    font-size: 52px;
     font-weight: 800;
     color: var(--black);
     line-height: 1.1;
-    margin-bottom: 24px;
-    text-transform: uppercase;
+    margin-bottom: 18px;
 }
 
 .about .content > p {

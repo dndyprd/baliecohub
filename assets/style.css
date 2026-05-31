@@ -2,6 +2,8 @@
 @import url('css/navbar.css');
 @import url('css/home.css');
 @import url('css/about.css');
+@import url('css/mitra.css');
+
 
 :root{
     --white: #f1f5fc;
@@ -59,6 +61,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    color: var(--primary);
 }
 
 .aksen span{
