@@ -38,6 +38,13 @@
     const offset = 120;
     const scrollPos = $window.scrollTop() + offset;
 
+    // CEK NAVLINK KONTAK
+    const isAtBottom = $window.scrollTop() + $window.height() >= $(document).height() - 4;
+    if (isAtBottom && $("#kontak").length) {
+      $navLinks.removeClass("active").filter("[href='#kontak']").addClass("active");
+      return;
+    }
+
     let currentId = sections[0].id;
     for (let i = 0; i < sections.length; i++) {
       if (sections[i].offsetTop <= scrollPos)

@@ -3,16 +3,11 @@
     grid-template-columns: 1fr 1.4fr;
     align-items: start;
     gap: 56px;
-    padding: 56px 120px;
+    padding: 56px 120px 120px;
     background: var(--white);
 }
 
 /* TITLE */
-.faq .title {
-    position: sticky;
-    top: 100px;
-}
-
 .faq .title .aksen {
     margin-bottom: 16px;
 }

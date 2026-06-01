@@ -1,0 +1,169 @@
+.footer {
+    background: var(--primary-hover);
+    color: var(--white);
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.8fr 0.8fr 0.8fr 1.3fr;
+    gap: 48px;
+    padding: 72px 120px 96px;
+}
+
+/* BRAND */
+.footer-brand .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.footer-brand .footer-logo img {
+    width: 40px;
+    background: var(--primary);
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.footer-brand .footer-logo span {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.footer-brand > p {
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.65;
+    margin-bottom: 24px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    font-size: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: 200ms ease;
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* KOLOM */
+.footer-col h5 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.footer-col h5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: rgba(241, 245, 252, 0.6);
+    transition: 200ms ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--white);
+    padding-left: 2px;
+}
+
+/* KONTAK */
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-list li i {
+    color: var(--primary);
+    font-size: 16px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    width: 16px;
+}
+
+.contact-list li span {
+    font-size: 16px;
+    color: rgba(241, 245, 252, 0.6);
+    line-height: 1.65;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-size: 16px;
+    color: var(--white);
+}
+
+/* TABLET RESPONSIVE */
+@media (max-width: 1024px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 56px 48px;
+    }
+
+    .footer-bottom {
+        padding: 18px 48px;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 48px 20px;
+    }
+
+    .footer-brand > p {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        padding: 16px 20px;
+        text-align: center;
+    }
+}
