@@ -1,4 +1,4 @@
-﻿(function ($) {
+(function ($) {
   if (!$) {
     console.warn("jQuery not found — index.js requires jQuery.");
     return;

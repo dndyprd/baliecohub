@@ -1,10 +1,4 @@
 (function ($) {
-    if (!$) {
-        console.warn("jQuery not found — accordion.js requires jQuery.");
-        return;
-    }
-
-    // BANGUN STRUKTUR DOM
     function buildAccordionStructure() {
         $(".faq-item").each(function () {
             const $item = $(this);

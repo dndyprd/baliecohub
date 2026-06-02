@@ -1,0 +1,210 @@
+.testimoni {
+    padding: 56px 96px 86px;
+    background: var(--white);
+    overflow: hidden;
+    position: relative;
+}
+
+.testimoni::before,
+.testimoni::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 96px;
+    
+    z-index: 5;
+    pointer-events: none;
+}
+
+.testimoni::before {
+    left: 0;
+    background: linear-gradient(to right, var(--white) 40%, transparent);
+}
+
+.testimoni::after {
+    right: 0;
+    background: linear-gradient(to left, var(--white) 40%, transparent);
+}
+
+.testimoni .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimoni .title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimoni .title .aksen {
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.testimoni .title h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 16px;
+}
+
+.testimoni .title p {
+    font-size: 16px;
+    color: var(--black);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* SLIDER */
+.testimoni-slider-wrapper {
+    position: relative;
+}
+
+.testimonial-swiper {
+    padding: 20px 0 70px 0;
+}
+
+.testimonial-swiper .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 2px solid var(--gray);
+    border-radius: 20px;
+    margin: 8px 0 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: 350ms ease-in-out;
+}
+
+.testimonial-swiper .card:hover {
+    transform: translateY(-4px);
+}
+/* Card Komentar */
+.testimonial-swiper .card p {
+    position: relative;
+    text-align: justify;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray) transparent;
+    color: var(--black);
+    z-index: 1;
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.9;
+    height: 130px;
+    max-width: 100%;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 4px;
+}
+
+.testimonial-swiper .card p::-webkit-scrollbar {
+    width: 4px;
+}
+
+.testimonial-swiper .card p::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.testimonial-swiper .card p::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: 4px;
+}
+
+/* Card Profile */
+.testimonial-swiper .profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid var(--gray);
+    padding-top: 20px;
+    flex-shrink: 0;
+}
+
+.testimonial-swiper .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.testimonial-swiper .profile .info h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 4px;
+}
+
+.testimonial-swiper .profile .info span {
+    font-size: 13px;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+/* SWIPER BUTTON & PAGINATION */
+.testimonial-swiper .swiper-pagination-bullet {
+    background: var(--primary);
+    opacity: 0.3;
+    z-index: 20;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 24px;
+    border-radius: 8px;
+}
+
+.testimonial-swiper .swiper-button-next,
+.testimonial-swiper .swiper-button-prev {
+    color: var(--primary);
+    background: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid var(--gray);
+    top: calc(50% + 5px);
+    z-index: 20;
+}
+
+.testimonial-swiper .swiper-button-next::after,
+.testimonial-swiper .swiper-button-prev::after {
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .testimoni {
+        padding: 80px 48px;
+    }
+    .testimoni .title h2 {
+        font-size: 32px;
+    }
+    .testimoni::before,
+    .testimoni::after {
+        width: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimoni {
+        padding: 60px 20px;
+    }
+    .testimoni .title h2 {
+        font-size: 28px;
+    }
+    .testimonial-swiper .card {
+        padding: 24px 18px;
+    }
+    .testimonial-swiper .swiper-button-next,
+    .testimonial-swiper .swiper-button-prev {
+        display: none;
+    }
+    .testimoni::before,
+    .testimoni::after {
+        display: none;
+    }
+}

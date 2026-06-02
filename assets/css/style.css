@@ -5,6 +5,7 @@
 @import url('main/mitra.css');
 @import url('main/layanan.css');
 @import url('main/faq.css');
+@import url('main/testimoni.css');
 @import url('footer.css');
 
 
@@ -70,6 +71,7 @@ body {
 .aksen{
     display: flex;
     align-items: center;
+    text-transform: uppercase;
     gap: 12px;
     color: var(--primary);
 }

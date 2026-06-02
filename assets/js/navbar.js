@@ -1,9 +1,4 @@
 (function ($) {
-  if (!$) {
-    console.warn("jQuery not found — navbar.js requires jQuery.");
-    return;
-  }
-
   const $window = $(window);
   const $navbar = $("#navbar");
   const scrollThreshold = 80;
