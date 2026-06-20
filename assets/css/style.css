@@ -9,19 +9,35 @@
 @import url('footer.css');
 
 
-:root{
+:root {
     --white: #f1f5fc;
+    --white-alt: #ffffff;
     --gray: #dee6f4;
+    --gray-alt: #dce5f0;
+    --gray-muted: #666666;
     --black: #0e0e12;
+    --black-alt: #292e37;
     --primary: #007A55;
     --primary-hover: #006045;
     --secondary: #013529;
+    --glass: rgba(241, 245, 252, 0.92);
+    --shadow: rgba(0, 0, 0, 0.07);
 }
 
 body.dark {
-    --white: #19202d;
-    --gray: #2c313c;
-    --black: #f1f5fc;
+    --white: #0e1520;
+    --white-alt: #152030;
+    --gray: #1e2d3d;
+    --gray-alt: #1e3045;
+    --gray-muted: #7a9ab8;
+    --black: #e2eaf5;
+    --black-alt: #c8d8e8;
+    --primary: #00c88a;
+    --primary-hover: #009c6a;
+    --secondary: #00c88a;
+    --glass: rgba(14, 21, 32, 0.95);
+    --shadow: rgba(0, 0, 0, 0.35);
+
 }
 
 *{
@@ -118,4 +134,102 @@ body {
     70% { transform: rotate(0deg); }
     85% { transform: rotate(1deg); }
     100% { transform: rotate(0); }
+}
+
+body {
+    transition: background-color 250ms ease, color 250ms ease;
+}
+
+/* Floating Card */
+body.dark .floating-card {
+    background: var(--white-alt);
+    border-color: var(--gray-alt);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+}
+
+/* Layanan */
+body.dark .layanan .container .aksen,
+body.dark .layanan .container h2 {
+    color: var(--black);
+}
+body.dark .layanan .container {
+    background: #111a26;
+}
+body.dark .layanan .container .aksen span {
+    background: var(--black) !important;
+}
+
+/* Layanan Card */
+body.dark .layanan .card {
+    background: var(--white-alt);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .layanan .card h3 {
+    color: #a0f0d0;
+}
+
+/* Mitra Logo */
+body.dark .mitra-logos img {
+    background: var(--white-alt);
+    border-color: var(--gray-alt);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Item */
+body.dark .faq-item {
+    background: var(--white-alt);
+    border-color: var(--gray-alt);
+}
+
+body.dark .faq-item h5 .faq-icon {
+    background: var(--gray-alt);
+    color: var(--black);
+}
+
+body.dark .faq-item.open h5 {
+    border-bottom-color: var(--gray-alt);
+}
+
+/* Testimoni Card */
+body.dark .testimonial-swiper .card {
+    background: var(--white-alt);
+    border-color: var(--gray-alt);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .testimonial-swiper .profile {
+    border-top-color: var(--gray-alt);
+}
+
+body.dark .testimonial-swiper .swiper-button-next,
+body.dark .testimonial-swiper .swiper-button-prev {
+    background: var(--white-alt);
+    border-color: var(--gray-alt);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar Dropdown */
+body.dark .dropdown-menu {
+    background: #111d2b;
+    border-color: var(--gray-alt);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer Logo */
+body.dark .footer-brand .footer-logo img {
+    background: #0e0e12;
+}
+
+/* Scrollbar dark mode */
+body.dark ::-webkit-scrollbar-track {
+    background: #0e1520;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+    background: #1e3045;
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+    background: #00c88a;
 }

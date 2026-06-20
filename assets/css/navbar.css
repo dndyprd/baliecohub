@@ -12,7 +12,9 @@
 }
 
 .navbar.active{
-    background: var(--white);
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     padding: 16px 64px;
 }
@@ -35,6 +37,14 @@
     background: var(--primary);
     border-radius: 100%;
     padding: 6px;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: var(--black);
+    cursor: pointer;
 }
 
 /* List Item */
@@ -212,13 +222,20 @@
     }
 
     .navbar .logo{
-        width: 100%;
+        width: auto;
         justify-content: flex-start;
         gap: 12px;
     }
 
     .navbar .logo span{
         font-size: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 16px;
     }
 
     .navbar ul{

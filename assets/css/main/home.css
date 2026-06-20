@@ -131,7 +131,7 @@
 
 .stat-info span {
     font-size: 13px;
-    color: #888;
+    color: var(--gray-muted);
 }
 
 .stat-value {

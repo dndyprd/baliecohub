@@ -20,7 +20,7 @@
 
 .footer-brand .footer-logo img {
     width: 40px;
-    background: var(--primary);
+    background: var(--primary-hover);
     border-radius: 50%;
     padding: 6px;
 }
@@ -34,7 +34,7 @@
 .footer-brand > p {
     font-size: 16px;
     line-height: 1.8;
-    opacity: 0.65;
+    opacity: 0.95;
     margin-bottom: 24px;
 }
 
@@ -50,10 +50,10 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
+    background: transparent;
     color: var(--white);
     font-size: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid var(--white);
     transition: 200ms ease;
 }
 
@@ -80,7 +80,7 @@
     left: 0;
     width: 28px;
     height: 2px;
-    background: var(--primary);
+    background: var(--white);
     border-radius: 2px;
 }
 
@@ -93,12 +93,14 @@
 
 .footer-col ul li a {
     font-size: 16px;
-    color: rgba(241, 245, 252, 0.6);
+    color: var(--white);
+    opacity: 0.7;
     transition: 200ms ease;
 }
 
 .footer-col ul li a:hover {
     color: var(--white);
+    opacity: 1;
     padding-left: 2px;
 }
 
@@ -119,13 +121,14 @@
 
 .contact-list li span {
     font-size: 16px;
-    color: rgba(241, 245, 252, 0.6);
+    color: var(--white);
+    opacity: 0.7;
     line-height: 1.65;
 }
 
 /* BOTTOM BAR */
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid var(--white);
     padding: 20px 120px;
     display: flex;
     justify-content: center;

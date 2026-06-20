@@ -122,15 +122,35 @@
   // DARKMODE TOGGLE
   function initDarkMode() {
     const $btn = $(".darkmode-btn");
+    const STORAGE_KEY = "baliecohub_dark";
 
-    $btn.on("click", function () {
-      $("body").toggleClass("dark");
-      
-      if ($("body").hasClass("dark")) {
+    function applyDark(isDark) {
+      if (isDark) {
+        $("body").addClass("dark");
         $btn.html('<i class="fa-solid fa-cloud-sun"></i>');
       } else {
+        $("body").removeClass("dark");
         $btn.html('<i class="fa-solid fa-cloud-moon"></i>');
       }
+    }
+
+    // Terapkan preferensi yang tersimpan
+    const saved = localStorage.getItem(STORAGE_KEY);
+    applyDark(saved === "1");
+
+    $btn.on("click", function () {
+      const willBeDark = !$("body").hasClass("dark");
+      localStorage.setItem(STORAGE_KEY, willBeDark ? "1" : "0");
+      applyDark(willBeDark);
+    });
+  }
+
+  // MOBILE MENU TOGGLE
+  function initMobileMenu() {
+    const $toggleBtn = $("#mobile-menu");
+    
+    $toggleBtn.on("click", function () {
+      $navbar.toggleClass("open");
     });
   }
 
@@ -139,6 +159,7 @@
     updateActiveLink();
     initDropdown();
     initDarkMode();
+    initMobileMenu();
 
     $window.on("scroll", onScroll);
     $window.on("resize", updateActiveLink);
