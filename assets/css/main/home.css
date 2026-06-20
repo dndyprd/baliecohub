@@ -36,6 +36,7 @@
 
 .beranda .content p {
     color: var(--black);
+    text-align: justify;
     margin: 4px 0 36px 0;
     font-size: 18px;
     line-height: 1.6;
@@ -171,18 +172,6 @@
     opacity: 0.8;
 }
 
-/* Desktop Responsive */
-@media (min-width: 1400px) {
-    .beranda {
-        padding: 0 120px;
-        gap: 64px;
-    }
-
-    .beranda .content h3 {
-        font-size: 60px;
-    }
-}
-
 /* Tablet Responsive */
 @media (max-width: 1024px) {
     .beranda {
@@ -241,11 +230,9 @@
     .beranda {
         display: flex;
         flex-direction: column;
-        padding: 0 20px;
+        padding: 140px 40px 40px;
         gap: 24px;
-        min-height: auto;
-        padding-top: 80px;
-        padding-bottom: 40px;
+        min-height: auto; 
     }
 
     .beranda .content h1 {
@@ -269,7 +256,6 @@
     }
 
     .beranda .btn-group .btn {
-        width: 100%;
         justify-content: center;
         padding: 10px 20px;
     }
@@ -279,29 +265,25 @@
         position: relative;
     }
 
-    .hero-image-wrapper .main-img {
+    .hero-image-wrapper img {
         width: 100%;
-        height: 35vh;
+        height: 45vh;
         border-radius: 16px;
+        margin-top: 24px;
     }
 
-    /* Floating cards repositioned for mobile */
     .stats-card {
         position: relative;
-        bottom: auto;
-        right: auto;
-        top: auto;
-        left: auto;
-        width: 100%;
+        bottom: 8%;
+        right: -8%;
         margin-top: 20px;
         animation: none;
     }
 
     .user-card {
         position: relative;
-        top: auto;
-        left: auto;
-        width: 100%;
+        top: 5%;
+        left: -5%; 
         margin-top: 20px;
         animation: none;
     }
@@ -344,25 +326,5 @@
 
     .user-info span {
         font-size: 12px;
-    }
-}
-
-/* Extra small mobile (< 480px) */
-@media (max-width: 480px) {
-    .beranda {
-        padding: 0 16px;
-        padding-top: 70px;
-    }
-
-    .beranda .content h3 {
-        font-size: 28px;
-    }
-
-    .beranda .content p {
-        font-size: 13px;
-    }
-
-    .hero-image-wrapper .main-img {
-        height: 30vh;
     }
 }

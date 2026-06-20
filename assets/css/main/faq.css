@@ -142,7 +142,7 @@
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
     .faq {
-        padding: 48px 20px;
+        padding: 48px 40px;
         gap: 28px;
     }
 
@@ -168,15 +168,5 @@
         width: 28px;
         height: 28px;
         font-size: 11px;
-    }
-}
-
-@media (max-width: 480px) {
-    .faq {
-        padding: 40px 16px;
-    }
-
-    .faq .title h2 {
-        font-size: 24px;
     }
 }

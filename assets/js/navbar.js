@@ -121,24 +121,25 @@
 
   // DARKMODE TOGGLE
   function initDarkMode() {
-    const $btn = $(".darkmode-btn");
+    const $btns = $(".darkmode-btn");
     const STORAGE_KEY = "baliecohub_dark";
 
     function applyDark(isDark) {
+      const iconHtml = isDark
+        ? '<i class="fa-solid fa-cloud-sun"></i>'
+        : '<i class="fa-solid fa-cloud-moon"></i>';
       if (isDark) {
         $("body").addClass("dark");
-        $btn.html('<i class="fa-solid fa-cloud-sun"></i>');
       } else {
         $("body").removeClass("dark");
-        $btn.html('<i class="fa-solid fa-cloud-moon"></i>');
       }
+      $btns.html(iconHtml);
     }
 
-    // Terapkan preferensi yang tersimpan
     const saved = localStorage.getItem(STORAGE_KEY);
     applyDark(saved === "1");
 
-    $btn.on("click", function () {
+    $btns.on("click", function () {
       const willBeDark = !$("body").hasClass("dark");
       localStorage.setItem(STORAGE_KEY, willBeDark ? "1" : "0");
       applyDark(willBeDark);
@@ -148,9 +149,19 @@
   // MOBILE MENU TOGGLE
   function initMobileMenu() {
     const $toggleBtn = $("#mobile-menu");
-    
+    const $icon = $toggleBtn.find("i");
+
     $toggleBtn.on("click", function () {
-      $navbar.toggleClass("open");
+      const isOpen = $navbar.toggleClass("open").hasClass("open");
+      $icon.toggleClass("fa-bars", !isOpen).toggleClass("fa-xmark", isOpen);
+    });
+
+    // Tutup menu ketika klik link
+    $navbar.on("click", "ul li > a", function () {
+      if ($(window).width() <= 768 && !$(this).closest(".has-dropdown").length) {
+        $navbar.removeClass("open");
+        $icon.addClass("fa-bars").removeClass("fa-xmark");
+      }
     });
   }
 

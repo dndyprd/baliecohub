@@ -124,3 +124,40 @@
 .card-link:hover {
     background: var(--primary-hover);
 }
+
+/* TABLET RESPONSIVE */
+@media (max-width: 1024px) {
+    .layanan {
+        padding: 48px 48px;
+    }
+
+    .layanan .container {
+        padding: 48px 40px 64px;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .layanan {
+        padding: 32px 24px;
+    }
+
+    .layanan .container {
+        padding: 40px 28px 52px;
+        border-radius: 16px;
+    }
+
+    .layanan .container h2 {
+        font-size: 26px;
+        margin-bottom: 24px;
+    }
+
+    .layanan-cards {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .layanan .card {
+        padding: 24px 20px 20px;
+    }
+}

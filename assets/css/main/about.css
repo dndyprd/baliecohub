@@ -94,3 +94,51 @@
     border: 8px solid var(--white);
     animation: rotateLeft 6s ease-in-out infinite;
 }
+
+/* TABLET RESPONSIVE */
+@media (max-width: 1024px) {
+    .about {
+        padding: 60px 48px;
+        gap: 40px;
+    }
+
+    .about .content h2 {
+        font-size: 40px;
+    }
+
+    .about-image-wrapper {
+        height: 480px;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+        padding: 56px 40px;
+        gap: 40px;
+        min-height: unset;
+    }
+
+    .about .content {
+        order: 1;
+    }
+
+    .about-image-wrapper {
+        order: 2;
+        height: 320px;
+    }
+
+    .about .content h2 {
+        font-size: 32px;
+    }
+
+    .about .content > p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .about .sdg-icons img {
+        height: 52px;
+    }
+}

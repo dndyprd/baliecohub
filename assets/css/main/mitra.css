@@ -86,7 +86,7 @@
 
 /* Mobile Responsiv */
 @media (max-width: 768px) {
-    .mitra { padding: 40px 20px; }
+    .mitra { padding: 40px 40px; }
     
     .mitra .content h2 { font-size: 28px; }
     
