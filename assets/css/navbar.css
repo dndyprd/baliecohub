@@ -29,6 +29,7 @@
 .navbar .logo span{
     font-size: 24px;
     font-weight: 700;
+    color: var(--black);
 }
 
 .navbar .logo img{
