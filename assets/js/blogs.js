@@ -9,43 +9,37 @@
         {
             title: "5 Langkah Mudah Memilah Sampah Organik Upacara Adat di Rumah",
             date: "29 Juni 2026",
-            img: "assets/img/blogs/blogs1.jpg",
+            img: "pilah-bank-sampah.jpg",
             desc: "Sisa janur, bunga, dan sarana upacara (banten) sering kali menumpuk begitu saja. Pelajari cara mengolahnya menjadi kompos berkualitas tinggi secara mandiri tanpa bau."
         },
         {
             title: "Ancaman Mikroplastik di Pesisir Pantai Kuta dan Efeknya Bagi Nelayan Lokal",
             date: "22 Mei 2026",
-            img: "assets/img/blogs/blogs2.jpg",
+            img: "sampah-lautan.jpg",
             desc: "Investigasi mendalam mengenai pergerakan arus sampah plastik di perairan Bali Selatan dan bagaimana aksi pelaporan cepat lewat Eco-Report membantu pencegahannya."
-        },
-        {
-            title: "Menuju Pesta Kesenian Bali (PKB) 2026 yang Zero-Waste: Tantangan dan Implementasi",
-            date: "10 Mei 2026",
-            img: "assets/img/blogs/blogs3.jpg",
-            desc: "Menengok kesiapan panitia dan kolaborasi pelaku UMKM kuliner dalam menekan penggunaan wadah plastik sekali pakai selama festival budaya terbesar tahun ini."
         },
         {
             title: "Maksimalkan Cuan Hijau: Strategi Menukar Eco-Points Menjadi Kerajinan Bernilai Jual",
             date: "5 April 2026",
-            img: "assets/img/blogs/blogs4.jpg",
+            img: "bank-sampah-adat.jpg",
             desc: "Panduan lengkap bagi pengguna baru BaliEco Hub untuk mengonversi akumulasi poin timbangan sampah menjadi produk kreatif buatan UMKM lokal Bali."
         },
         {
             title: "Peran Banjar Adat dalam Menggerakkan Digitalisasi Bank Sampah di Pedesaan",
             date: "21 Maret 2026",
-            img: "assets/img/blogs/blogs5.jpg",
+            img: "bank-sampah-banjar.jpg",
             desc: "Pulau Bali tidak hanya dikenal karena keindahan alam dan kekuatan budayanya, tetapi kini tengah menghadapi tantangan besar: krisis pengelolaan sampah di tingkat hulu. Dengan kapasitas Tempat Pembuangan Akhir (TPA) yang kian kritis, pola pikir konvensional kumpul-angkut-buang harus segera ditinggalkan. Di sinilah Banjar Adat, sebagai institusi sosial-tradisional paling kokoh di Bali, mengambil peran sentral. Melalui integrasi kearifan lokal dan platform Clean-Tech BaliEco Hub, digitalisasi bank sampah di pedesaan kini bukan lagi sekadar wacana, melainkan sebuah gerakan nyata yang terstruktur."
         },
         {
             title: "Mengenal Sistem Geofencing pada Fitur Eco-Report BaliEco Hub",
             date: "14 Februari 2026",
-            img: "assets/img/blogs/blogs6.jpg",
+            img: "tumpukan-sampah.jpg",
             desc: "Bagaimana cara kerja GPS dan validasi koordinat otomatis saat masyarakat mengirimkan foto tumpukan sampah liar di sekitar mereka."
         },
         {
             title: "Menatap Masa Depan Bali Pasca-TPA Suwung: Bagaimana Teknologi Sirkular Menjadi Penyelamat? ",
             date: "20 Januari 2026",
-            img: "assets/img/blogs/blogs7.jpg",
+            img: "tpa-suwung.jpg",
             desc: "Panduan lengkap bagi pengguna baru BaliEco Hub untuk mengonversi akumulasi poin timbangan sampah menjadi produk kreatif buatan UMKM lokal Bali."
         }
     ];
@@ -78,7 +72,7 @@
             const html = `
                 <a href="blog/sample-content.html" class="card">
                     <div class="img">
-                        <img src="${blog.img}" alt="${blog.title}">
+                        <img src="assets/img/content/${blog.img}" alt="${blog.title}">
                     </div>
                     <div class="content">
                         <h2>${blog.title}</h2>
