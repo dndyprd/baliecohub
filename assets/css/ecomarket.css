@@ -1,5 +1,5 @@
 .eco-market {
-    padding: 120px 20px 60px;
+    padding: 140px 20px 60px;
     background-color: var(--white);
     min-height: 100vh;
 }
@@ -117,7 +117,7 @@
     border-radius: 12px;
     border: none;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 300ms;
     white-space: nowrap;
 }
 
@@ -357,26 +357,28 @@ body.dark .filter-btn.active {
 /* MODALS */
 .modal-overlay {
     position: fixed;
+    display: none;
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0,0,0,0.5);
     backdrop-filter: blur(4px);
     z-index: 1000;
-    display: none;
 }
 
 .custom-modal {
     position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    display: none;
+    text-align: center;
+    box-sizing: border-box; 
     background: var(--white);
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
     padding: 32px;
     border-radius: 20px;
-    width: 90%;
-    max-width: 400px;
+    max-width: 480px;
     z-index: 1001;
-    text-align: center;
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-    display: none;
     animation: modalPop 0.3s ease-out;
 }
 
@@ -398,9 +400,9 @@ body.dark .filter-btn.active {
 .modal-icon.warning { color: #f59e0b; }
 
 .custom-modal h3 {
+    color: var(--black);
     font-size: 20px;
     font-weight: 800;
-    color: var(--black);
     margin-bottom: 10px;
 }
 
@@ -420,8 +422,8 @@ body.dark .filter-btn.active {
 }
 
 .user-detail-box p {
-    margin-bottom: 8px;
     color: var(--black);
+    margin-bottom: 8px;
     font-size: 13px;
 }
 .user-detail-box p:last-child { margin-bottom: 0; }
@@ -431,20 +433,21 @@ body.dark .filter-btn.active {
 }
 .form-group label {
     display: block;
+    color: var(--black);
     font-size: 13px;
     font-weight: 700;
-    color: var(--black);
     margin-bottom: 8px;
 }
 .form-group input, .form-group textarea {
-    width: 100%;
-    padding: 12px 16px;
-    border: 1px solid var(--gray-alt);
-    border-radius: 10px;
+    font-family: inherit;
+    box-sizing: border-box;
     background: var(--white-alt);
     color: var(--black);
-    font-family: inherit;
+    border: 1px solid var(--gray-alt);
     font-size: 14px;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
 }
 .form-group input:disabled {
     background: var(--gray);
@@ -511,4 +514,10 @@ body.dark .form-group input:disabled {
 body.dark .custom-modal h3,
 body.dark .form-group label {
     color: var(--black);
+}
+
+@media (max-width: 480px) {
+    .custom-modal {
+        padding: 24px 20px;
+    }
 }

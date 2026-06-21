@@ -207,4 +207,7 @@
     .testimoni::after {
         display: none;
     }
+    .testimonial-swiper .card p {
+        pointer-events: none;
+    }
 }
