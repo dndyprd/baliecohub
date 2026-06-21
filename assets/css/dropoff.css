@@ -7,21 +7,21 @@
 /* HEADER */
 .dropoff-header {
     max-width: 900px;
-    margin: 0 auto 40px;
+    margin: 40px auto 0;
     text-align: center;
 }
 
 .dropoff-header .badge {
     color: var(--primary);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .dropoff-header h1 {
     margin-top: 4px;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 800;
     color: var(--black);
     line-height: 1.2;
@@ -33,7 +33,7 @@
 
 .dropoff-header p {
     margin-top: 16px;
-    font-size: 17px;
+    font-size: 18px;
     color: var(--gray-muted);
     max-width: 800px;
     margin-left: auto;
@@ -41,10 +41,219 @@
     line-height: 1.7;
 }
 
+/* Steps Container */
+.dropoff-steps-container {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.steps-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 40px;
+}
+
+.dropoff-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.dropoff-steps::before {
+    content: '';
+    position: absolute;
+    top: 40px; 
+    left: 10%;
+    right: 10%;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 100' preserveAspectRatio='none'%3E%3Cpath vector-effect='non-scaling-stroke' d='M 0,100 C 100,100 100,0 200,0 C 300,0 300,100 400,100 C 500,100 500,0 600,0 C 700,0 700,100 800,100' fill='none' stroke='%23007A55' stroke-width='2'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.step-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 10px;
+}
+
+.step-item.step-down {
+    margin-top: 60px;
+}
+
+/* Hexagon Icon */
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 24px;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05); 
+    background: #e8f5f0; 
+}
+
+/* Text & Big Faint Number */
+.step-text {
+    position: relative;
+    text-align: center;
+}
+
+.step-bg-number {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 80px;
+    font-weight: 900;
+    color: var(--gray-alt);
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.step-text h4 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+.step-text p {
+    font-size: 13px;
+    color: var(--gray-muted);
+    line-height: 1.5;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* Dark Mode */
+body.dark .steps-title,
+body.dark .step-text h4,
+body.dark .step-text p {
+    color: var(--black);
+}
+
+body.dark .step-icon {
+    background: var(--white-alt);
+    color: var(--primary);
+}
+
+body.dark .step-bg-number {
+    color: var(--gray);
+    opacity: 0.5;
+}
+
+body.dark .dropoff-wrapper {
+    background: var(--white);
+}
+
+body.dark .dropoff-header h1 {
+    color: var(--black);
+}
+
+body.dark .conversion-card {
+    background: var(--white-alt);
+    border-color: var(--gray-alt);
+}
+
+body.dark .conversion-card-header {
+    border-bottom-color: var(--gray-alt);
+}
+
+body.dark .conversion-card-header h3 {
+    color: var(--black);
+}
+
+body.dark .conversion-item {
+    background: var(--gray);
+    border-color: var(--gray-alt);
+}
+
+body.dark .conv-icon {
+    background: var(--white-alt);
+}
+
+body.dark .slider-header h3 {
+    color: var(--black);
+}
+
+body.dark .slider-btn {
+    background: var(--white-alt);
+    border-color: var(--gray-alt);
+    color: var(--black);
+}
+
+@media (max-width: 768px) {
+    .dropoff-steps {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding-left: 20px;
+    }
+    
+    .dropoff-steps::before {
+        left: 60px;
+        right: auto;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        height: 100%;
+    }
+    
+    .step-item {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        text-align: left;
+    }
+    
+    .step-item.step-down {
+        margin-top: 0;
+    }
+    
+    .step-icon {
+        margin-bottom: 0;
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        flex-shrink: 0;
+    }
+    
+    .step-text {
+        text-align: left;
+    }
+    
+    .step-bg-number {
+        left: -10px;
+        top: -15px;
+        font-size: 50px;
+    }
+    
+    .step-text p {
+        max-width: 100%;
+    }
+}
+
 /* CONVERSION CARD */
 .conversion-card {
     max-width: 900px;
-    margin: 0 auto 64px;
+    margin: 24px auto 0;
     background: var(--white-alt);
     border: 1px solid var(--gray);
     border-radius: 20px;
@@ -136,7 +345,7 @@
 /* SLIDER SECTION */
 .slider-section {
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 40px auto 72px;
     padding: 0 4px;
 }
 
@@ -197,7 +406,6 @@
     overflow: hidden;
     background: #0d1f14;
     color: #fff;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
     display: flex;
     flex-direction: column;
 }

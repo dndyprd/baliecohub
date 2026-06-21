@@ -8,6 +8,7 @@
     <link rel="icon" href="../assets/img/logo.png" type="image/png">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/blogs.css">
+    <link rel="stylesheet" href="../assets/css/ecomarket.css">
     <link rel="stylesheet" href="../assets/lib/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
@@ -69,7 +70,286 @@
     </nav>
 
     <!-- Detail Blogs -->
-    <section class="eco-report">
+    <section class="eco-market">
+        <div class="market-container">
+
+            <div class="market-header">
+                <span class="market-badge">Eco-Marketplace</span>
+                <h1>Tukarkan Poin, <span class="text-green">Nikmati Rewardnya!</span></h1>
+                <p>Gunakan saldo Eco-Points hasil pilah sampahmu untuk mendapatkan sembako harian, voucher digital,
+                    hingga gadget menarik.</p>
+            </div>
+
+            <!-- Saldo -->
+            <div class="sync-card">
+                <div class="sync-info">
+                    <div class="sync-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <div>
+                        <h4>Sistem Sinkronisasi Saldo Poin</h4>
+                        <p>Masukkan nomor HP yang Anda daftarkan saat menimbang sampah di Drop-Off Station.</p>
+                    </div>
+                </div>
+
+                <div class="sync-form">
+                    <input id="inputPhone" placeholder="Contoh: 081234567890">
+                    <button id="btnCekSaldo" class="btn-sync">Cek Saldo</button>
+                </div>
+            </div>
+
+            <div id="saldoDisplay" class="saldo-display" style="display: none;">
+                <span class="saldo-status">Status: <strong>Terhubung</strong></span>
+                <div class="saldo-divider"></div>
+                <p class="saldo-amount">Saldo: <span id="valSaldo">45.000</span> Eco-Points</p>
+            </div>
+
+            <!-- Produk -->
+            <div class="market-content">
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="../assets/img/beras.jpg" alt="Beras">
+
+                        </div>
+                        <div class="product-info">
+                            <h4>Beras 1 Kg</h4>
+                            <p>Stok Tersedia: 45 pcs</p>
+                        </div>
+                        <div class="product-action">
+                            <p class="product-price">6.000 <span>Poin</span></p>
+                            <button class="btn-tukar" data-name="Beras 1 Kg" data-price="6000"
+                                data-type="fisik">Tukarkan</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="../assets/img/beras.jpg" alt="Beras">
+
+                        </div>
+                        <div class="product-info">
+                            <h4>Beras 3 Kg</h4>
+                            <p>Stok Tersedia: 20 pcs</p>
+                        </div>
+                        <div class="product-action">
+                            <p class="product-price">17.000 <span>Poin</span></p>
+                            <button class="btn-tukar" data-name="Beras 3 Kg" data-price="17000"
+                                data-type="fisik">Tukarkan</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="../assets/img/minyak.jpg" alt="Minyak">
+
+                        </div>
+                        <div class="product-info">
+                            <h4>Minyak Goreng 1 Liter</h4>
+                            <p>Stok Tersedia: 12 pcs</p>
+                        </div>
+                        <div class="product-action">
+                            <p class="product-price">5.500 <span>Poin</span></p>
+                            <button class="btn-tukar" data-name="Minyak Goreng 1 Liter" data-price="5500"
+                                data-type="fisik">Tukarkan</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="../assets/img/minyak.jpg" alt="Minyak">
+
+                        </div>
+                        <div class="product-info">
+                            <h4>Minyak Goreng 3 Liter</h4>
+                            <p>Stok Tersedia: 20 pcs</p>
+                        </div>
+                        <div class="product-action">
+                            <p class="product-price">9.500 <span>Poin</span></p>
+                            <button class="btn-tukar" data-name="Minyak Goreng 3 Liter" data-price="9500"
+                                data-type="fisik">Tukarkan</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="../assets/img/indomie.jpg" alt="Indomie">
+
+                        </div>
+                        <div class="product-info">
+                            <h4>Indomie 5 pcs</h4>
+                            <p>Stok Tersedia: 50 pcs</p>
+                        </div>
+                        <div class="product-action">
+                            <p class="product-price">2.500 <span>Poin</span></p>
+                            <button class="btn-tukar" data-name="Indomie 5 pcs" data-price="2500"
+                                data-type="fisik">Tukarkan</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="../assets/img/indomie.jpg" alt="Indomie">
+
+                        </div>
+                        <div class="product-info">
+                            <h4>Indomie 1 dus</h4>
+                            <p>Stok Tersedia: 23 pcs</p>
+                        </div>
+                        <div class="product-action">
+                            <p class="product-price">15.000 <span>Poin</span></p>
+                            <button class="btn-tukar" data-name="Indomie 1 dus" data-price="15000"
+                                data-type="fisik">Tukarkan</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="../assets/img/pln.jpg" alt="PLN">
+
+                        </div>
+                        <div class="product-info">
+                            <h4>Voucher Token Listrik PLN Rp20.000</h4>
+                            <p>Stok Tersedia: Unlimited</p>
+                        </div>
+                        <div class="product-action">
+                            <p class="product-price">8.500 <span>Poin</span></p>
+                            <button class="btn-tukar" data-name="Voucher Token PLN Rp20.000" data-price="8500"
+                                data-type="digital">Tukarkan</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="../assets/img/pln.jpg" alt="PLN">
+
+                        </div>
+                        <div class="product-info">
+                            <h4>Voucher Token PLN Rp50.000</h4>
+                            <p>Stok Tersedia: Unlimited</p>
+                        </div>
+                        <div class="product-action">
+                            <p class="product-price">20.000 <span>Poin</span></p>
+                            <button class="btn-tukar" data-name="Voucher Token PLN Rp50.000" data-price="20000"
+                                data-type="digital">Tukarkan</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="../assets/img/gopay.png" alt="Voucher Belanja">
+
+                        </div>
+                        <div class="product-info">
+                            <h4>Voucher Gopay Rp10.000</h4>
+                            <p>Stok Tersedia: Unlimited</p>
+                        </div>
+                        <div class="product-action">
+                            <p class="product-price">4.500 <span>Poin</span></p>
+                            <button class="btn-tukar" data-name="Voucher Gopay Rp10.000" data-price="4500"
+                                data-type="digital">Tukarkan</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="../assets/img/gopay.png" alt="Voucher Belanja">
+
+                        </div>
+                        <div class="product-info">
+                            <h4>Voucher Gopay Rp50.000</h4>
+                            <p>Stok Tersedia: Unlimited</p>
+                        </div>
+                        <div class="product-action">
+                            <p class="product-price">20.500 <span>Poin</span></p>
+                            <button class="btn-tukar" data-name="Voucher Gopay Rp50.000" data-price="20500"
+                                data-type="digital">Tukarkan</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="../assets/img/powerbank.jpg" alt="Powerbank">
+
+                        </div>
+                        <div class="product-info">
+                            <h4>Powerbank 10.000mAh</h4>
+                            <p>Stok Tersedia: 5 pcs</p>
+                        </div>
+                        <div class="product-action">
+                            <p class="product-price">40.000 <span>Poin</span></p>
+                            <button class="btn-tukar" data-name="Powerbank 10.000mAh" data-price="40000"
+                                data-type="fisik">Tukarkan</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="../assets/img/tws.jpg" alt="TWS">
+
+                        </div>
+                        <div class="product-info">
+                            <h4>TWS Bluetooth 5.3</h4>
+                            <p>Stok Tersedia: 3 pcs</p>
+                        </div>
+                        <div class="product-action">
+                            <p class="product-price">50.000 <span>Poin</span></p>
+                            <button class="btn-tukar" data-name="TWS Bluetooth 5.3" data-price="50000"
+                                data-type="fisik">Tukarkan</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- MODALS -->
+        <div id="modalOverlay" class="modal-overlay"></div>
+
+        <!-- Modal Success Sync -->
+        <div id="modalSyncSuccess" class="custom-modal">
+            <div class="modal-icon success"><i class="fa-solid fa-check-circle"></i></div>
+            <h3>Sinkronisasi Berhasil!</h3>
+            <p>Akun Anda telah terhubung dengan sistem Eco-Market.</p>
+            <div class="user-detail-box">
+                <p><strong>Nama:</strong> I Putu Dandy Pradnyana</p>
+                <p><strong>No. Telp:</strong> <span id="syncModalPhone"></span></p>
+                <p><strong>Total Saldo:</strong> <span class="text-green">45.000 Eco-Points</span></p>
+            </div>
+            <button class="btn-tukar btn-close-modal" onclick="closeModal('modalSyncSuccess')">Mulai Tukar Poin</button>
+        </div>
+
+        <!-- Modal Error / Warning -->
+        <div id="modalWarning" class="custom-modal">
+            <div class="modal-icon warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <h3 id="warningTitle">Perhatian</h3>
+            <p id="warningMsg">Pesan error di sini</p>
+            <button class="btn-tukar btn-close-modal mt-3" onclick="closeModal('modalWarning')">Tutup</button>
+        </div>
+
+        <!-- Modal Redeem Form -->
+        <div id="modalRedeem" class="custom-modal form-modal">
+            <h3>Formulir Penukaran Reward</h3>
+            <p class="mb-3 text-sm">Anda akan menukarkan <strong id="redeemItemName" class="text-green"></strong>
+                senilai <strong id="redeemItemPrice"></strong> poin.</p>
+
+            <div class="form-group">
+                <label>Nama Penerima</label>
+                <input type="text" value="I Putu Dandy Pradnyana" disabled>
+            </div>
+            <div class="form-group">
+                <label>Nomor WhatsApp / HP</label>
+                <input type="text" id="redeemPhone" disabled>
+            </div>
+
+            <div class="form-group" id="addressGroup">
+                <label>Alamat Pengiriman</label>
+                <textarea id="redeemAddress" rows="3" placeholder="Masukkan alamat lengkap pengiriman..."></textarea>
+                <small class="text-muted">*Wajib diisi untuk pengiriman barang fisik</small>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeModal('modalRedeem')">Batal</button>
+                <button class="btn-confirm" id="btnConfirmRedeem">Konfirmasi Penukaran</button>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -144,6 +424,7 @@
     <!-- Scripts -->
     <script src="../assets/js/navbar.js"></script>
     <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/ecomarket.js"></script>
 </body>
 
 </html>

@@ -427,6 +427,16 @@ body.dark .blogs .pagination .dots {
 }
 
 /* Dark Mode */
+body.dark .blogs .card {
+    background: var(--white-alt);
+    border-color: var(--gray-alt);
+}
+
+body.dark .blogs .featured h5 {
+    color: var(--black);
+    border: 2px solid var(--black);
+}
+
 body.dark .detail-blogs {
     background: var(--white);
 }
