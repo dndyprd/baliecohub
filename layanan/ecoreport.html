@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaliEco Hub - Blogs</title>
+    <link rel="icon" href="../assets/img/logo.png" type="image/png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/ecoreport.css">
+    <link rel="stylesheet" href="../assets/lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <img src="../assets/img/logo.png" alt="BaliEco Hub">
+            <span>BaliEco Hub</span>
+        </div>
+        <div class="nav-controls">
+            <div class="darkmode-btn">
+                <i class="fa-solid fa-cloud-moon"></i>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <!-- List Item -->
+        <ul>
+            <li>
+                <a href="../index.html#beranda">Beranda</a>
+            </li>
+            <li>
+                <a href="../index.html#tentang-kami">Tentang Kami</a>
+            </li>
+            <li class="has-dropdown">
+                <a href="../index.html#layanan">Layanan <i class="fa-solid fa-chevron-down dropdown-chevron"></i></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="../layanan/ecoreport.html">Eco-Report</a>
+                    </li>
+                    <li>
+                        <a href="../layanan/dropoff.html">Drop-Off Stations</a>
+                    </li>
+                    <li>
+                        <a href="../layanan/ecomarket.html">Eco-Market</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="../blogs.html">Blog</a>
+            </li>
+            <li>
+                <a href="#kontak">Kontak</a>
+            </li>
+        </ul>
+        <div class="action-btn">
+            <a href="ecoreport.html">
+                <div class="btn">
+                    Laporkan Sampah
+                </div>
+            </a>
+            <div class="darkmode-btn desktop-only">
+                <i class="fa-solid fa-cloud-moon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Detail Blogs -->
+    <section class="eco-report">
+        <div class="eco-report-wrapper">
+            <div class="eco-report-header">
+                <span class="badge">Fasilitas Layanan</span>
+                <h1><span class="text-green">Eco-Report:</span> Pelaporan Sampah Liar</h1>
+                <p>
+                    Jadilah agen perubahan. Laporkan titik tumpukan sampah ilegal di sekitarmu secara real-time demi
+                    menjaga keasrian Pulau Dewata.
+                </p>
+            </div>
+
+            <div class="eco-report-content">
+
+                <!-- FORM PENGADUAN -->
+                <div class="report-card">
+                    <h3><i class="fa-solid fa-clipboard-list"></i> Formulir Pengaduan Digital</h3>
+
+                    <form>
+                        <div class="form-group">
+                            <label>Unggah Bukti Foto Tumpukan Sampah</label>
+                            <label for="file-upload" class="dropzone">
+                                <i class="fa-solid fa-camera icon"></i>
+                                <div id="dropzone-text" class="text">
+                                    <span>Tarik foto ke sini</span>
+                                    <p>atau klik untuk memilih file</p>
+                                </div>
+                                <p class="hint">Format: JPG, PNG. Maksimal 5MB</p>
+                                <input id="file-upload" name="foto_sampah" type="file" accept=".jpg, .jpeg, .png"
+                                    style="display: none;">
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Lokasi Sampah</label>
+                            <div class="input-grid">
+                                <div class="custom-select">
+                                    <div class="select-selected form-control">
+                                        <span style="color: var(--gray-muted);">Pilih Kabupaten/Kota</span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div class="select-items select-hide form-control">
+                                        <div data-value="Denpasar">Denpasar</div>
+                                        <div data-value="Badung">Badung</div>
+                                        <div data-value="Gianyar">Gianyar</div>
+                                        <div data-value="Tabanan">Tabanan</div>
+                                        <div data-value="Bangli">Bangli</div>
+                                        <div data-value="Karangasem">Karangasem</div>
+                                        <div data-value="Jembrana">Jembrana</div>
+                                        <div data-value="Buleleng">Buleleng</div>
+                                    </div>
+                                    <input type="hidden" name="lokasi_sampah">
+                                </div>
+                                <button type="button" id="btn-gps" class="btn-gps">
+                                    <i class="fa-solid fa-location-crosshairs"></i> <span>Gunakan Lokasi Saya
+                                        (GPS)</span>
+                                </button>
+                            </div>
+                            <input type="text" id="detail-lokasi"
+                                placeholder="Detail alamat spesifik (Misal: Jl. Raya Kuta, Dekat jembatan)"
+                                class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Estimasi Volume Sampah</label>
+                            <div class="custom-select">
+                                <div class="select-selected form-control">
+                                    <span style="color: var(--gray-muted);">Pilih Estimasi Volume Sampah</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div class="select-items select-hide form-control">
+                                    <div data-value="Skala Kecil (Kantong plastik berserakan)">Skala Kecil (Kantong
+                                        plastik berserakan)</div>
+                                    <div data-value="Skala Sedang (Menumpuk di pinggir jalan / menyumbat selokan)">Skala
+                                        Sedang (Menumpuk di pinggir jalan / menyumbat selokan)</div>
+                                    <div data-value="Skala Darurat (Tumpukan liar masif / mengganggu aliran sungai)">
+                                        Skala Darurat (Tumpukan liar masif / mengganggu aliran sungai)</div>
+                                </div>
+                                <input type="hidden" name="volume_sampah">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Catatan Tambahan (Opsional)</label>
+                            <textarea
+                                placeholder="Tuliskan detail kondisi di lapangan (misal: sampah medis, mengeluarkan aroma menyengat, dll.)"
+                                class="form-control"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            Kirim Laporan Pengaduan
+                        </button>
+                    </form>
+                </div>
+
+                <!-- MAPS -->
+                <div class="report-card map-card">
+                    <div>
+                        <h3><i class="fa-solid fa-map-location-dot"></i> Peta Sebaran Laporan Aktif</h3>
+                        <p class="map-description">Memantau transparansi aksi bersih-bersih dari laporan krama Bali
+                            secara real-time.</p>
+
+                        <div class="map-container"
+                            style="overflow: hidden; border-radius: 16px; position: relative; height: 400px;">
+                            <div class="map-inner"
+                                style="position: absolute; top: -80px; left: -80px; bottom: -80px; right: -80px;">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d700000!2d115.10!3d-8.40!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                                    width="100%" height="100%" style="border:0; pointer-events: none;"
+                                    allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                                <!-- Laporan Baru -->
+                                <div class="map-pin pin-red-1 red bounce">
+                                    <i class="fa-solid fa-location-dot icon"></i>
+                                    <span class="tooltip">Denpasar (Laporan Baru)</span>
+                                </div>
+                                <div class="map-pin pin-red-2 red bounce">
+                                    <i class="fa-solid fa-location-dot icon"></i>
+                                    <span class="tooltip">Ubud (Laporan Baru)</span>
+                                </div>
+
+                                <!-- On Going -->
+                                <div class="map-pin pin-yellow-1 yellow">
+                                    <i class="fa-solid fa-location-dot icon"></i>
+                                    <span class="tooltip">Nusa Dua (Sedang Proses)</span>
+                                </div>
+                                <div class="map-pin pin-yellow-2 yellow">
+                                    <i class="fa-solid fa-location-dot icon"></i>
+                                    <span class="tooltip">Jimbaran (Sedang Proses)</span>
+                                </div>
+                                <div class="map-pin pin-yellow-3 yellow">
+                                    <i class="fa-solid fa-location-dot icon"></i>
+                                    <span class="tooltip">Mengwi (Sedang Proses)</span>
+                                </div>
+                                <div class="map-pin pin-yellow-4 yellow">
+                                    <i class="fa-solid fa-location-dot icon"></i>
+                                    <span class="tooltip">Gianyar (Sedang Proses)</span>
+                                </div>
+
+                                <!-- Selesai -->
+                                <div class="map-pin pin-green-1 green">
+                                    <i class="fa-solid fa-location-dot icon"></i>
+                                    <span class="tooltip">Singaraja (Selesai Bersih)</span>
+                                </div>
+                                <div class="map-pin pin-green-2 green">
+                                    <i class="fa-solid fa-location-dot icon"></i>
+                                    <span class="tooltip">Negara (Selesai)</span>
+                                </div>
+                                <div class="map-pin pin-green-3 green">
+                                    <i class="fa-solid fa-location-dot icon"></i>
+                                    <span class="tooltip">Amlapura (Selesai)</span>
+                                </div>
+                                <div class="map-pin pin-green-4 green">
+                                    <i class="fa-solid fa-location-dot icon"></i>
+                                    <span class="tooltip">Renon (Selesai)</span>
+                                </div>
+                                <div class="map-pin pin-green-5 green">
+                                    <i class="fa-solid fa-location-dot icon"></i>
+                                    <span class="tooltip">Canggu (Selesai)</span>
+                                </div>
+                                <div class="map-pin pin-green-6 green">
+                                    <i class="fa-solid fa-location-dot icon"></i>
+                                    <span class="tooltip">Peguyangan (Selesai)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-legend">
+                        <div class="legend-item legend-red">
+                            <span class="dot"></span>
+                            <span>Laporan Baru</span>
+                        </div>
+                        <div class="legend-item legend-yellow">
+                            <span class="dot"></span>
+                            <span>Sedang Proses</span>
+                        </div>
+                        <div class="legend-item legend-green">
+                            <span class="dot"></span>
+                            <span>Selesai</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="footer">
+        <div class="footer-main">
+            <!-- Brand -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="../assets/img/logo.png" alt="BaliEco Hub">
+                    <span>BaliEco Hub</span>
+                </div>
+                <p>Platform Bank Sampah Digital terintegrasi yang menghubungkan masyarakat, komunitas, dan pelaku usaha
+                    untuk mewujudkan Bali bebas sampah.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <!-- Tautan Cepat -->
+            <div class="footer-col">
+                <h5>Tautan Cepat</h5>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#tentang-kami">Tentang Kami</a></li>
+                    <li><a href="#layanan">Layanan</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+            <!-- Layanan -->
+            <div class="footer-col">
+                <h5>Layanan Kami</h5>
+                <ul>
+                    <li><a href="layanan/ecoreport.html">Eco-Report</a></li>
+                    <li><a href="layanan/dropoff.html">Drop-Off Stations</a></li>
+                    <li><a href="layanan/ecomarket.html">Eco-Market</a></li>
+                </ul>
+            </div>
+            <!-- Kontak -->
+            <div class="footer-col">
+                <h5>Hubungi Kami</h5>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>+62 812-3456-7890</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@baliecohub.id</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Jl. Raya Kuta No. 88, Kuta, Kabupaten Badung, Bali 80361</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>BaliEco Hub <i class="fa-regular fa-copyright"></i> 2026 &mdash; Platform Pengelolaan Sampah
+                Digital Bali
+            </p>
+        </div>
+    </footer>
+
+    <!-- Library scripts -->
+    <script src="../assets/lib/jquery/jquery-3.5.1.min.js"></script>
+    <script src="../assets/lib/fontawesome/js/all.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/custom-select.js"></script>
+    <script src="../assets/js/index.js"></script>
+</body>
+
+</html>

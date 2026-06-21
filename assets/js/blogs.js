@@ -34,13 +34,13 @@
             title: "Peran Banjar Adat dalam Menggerakkan Digitalisasi Bank Sampah di Pedesaan",
             date: "21 Maret 2026",
             img: "assets/img/blogs/blogs5.jpg",
-            desc: "Bagaimana pendekatan kultural dan sentuhan aplikasi teknologi mampu meningkatkan partisipasi warga desa secara masif hingga mencapai angka efisiensi 85%."
+            desc: "Pulau Bali tidak hanya dikenal karena keindahan alam dan kekuatan budayanya, tetapi kini tengah menghadapi tantangan besar: krisis pengelolaan sampah di tingkat hulu. Dengan kapasitas Tempat Pembuangan Akhir (TPA) yang kian kritis, pola pikir konvensional kumpul-angkut-buang harus segera ditinggalkan. Di sinilah Banjar Adat, sebagai institusi sosial-tradisional paling kokoh di Bali, mengambil peran sentral. Melalui integrasi kearifan lokal dan platform Clean-Tech BaliEco Hub, digitalisasi bank sampah di pedesaan kini bukan lagi sekadar wacana, melainkan sebuah gerakan nyata yang terstruktur."
         },
         {
             title: "Mengenal Sistem Geofencing pada Fitur Eco-Report BaliEco Hub",
             date: "14 Februari 2026",
             img: "assets/img/blogs/blogs6.jpg",
-            desc: "Artikel teknis ringan mengenai cara kerja GPS dan validasi koordinat otomatis saat masyarakat mengirimkan foto tumpukan sampah liar di sekitar mereka."
+            desc: "Bagaimana cara kerja GPS dan validasi koordinat otomatis saat masyarakat mengirimkan foto tumpukan sampah liar di sekitar mereka."
         },
         {
             title: "Menatap Masa Depan Bali Pasca-TPA Suwung: Bagaimana Teknologi Sirkular Menjadi Penyelamat? ",
