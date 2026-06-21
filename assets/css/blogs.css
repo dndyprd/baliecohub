@@ -428,12 +428,17 @@ body.dark .blogs .pagination .dots {
 
 /* Dark Mode */
 body.dark .detail-blogs {
-    background: var(--black);
+    background: var(--white);
+}
+
+body.dark .blog-content .cover-img {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 body.dark .related-card {
-    background: var(--black-alt);
+    background: var(--white-alt);
     border-color: var(--gray-alt);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 body.dark .blog-content h1,
@@ -443,6 +448,14 @@ body.dark .blog-content ul li,
 body.dark .sidebar h3,
 body.dark .related-card .info h4 {
     color: var(--black);
+}
+
+body.dark .blog-content h5 {
+    color: var(--gray-muted);
+}
+
+body.dark .blog-content strong {
+    color: var(--primary);
 }
 
 body.dark .sidebar h3 {

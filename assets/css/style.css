@@ -250,50 +250,150 @@ body.dark ::-webkit-scrollbar-thumb:hover {
     background: #00c88a;
 }
 
-/* Eco Report */
+/* Eco Report Dark Mode */
 body.dark .eco-report-wrapper {
-    background: var(--black);
+    background: var(--white);
 }
 
 body.dark .report-card {
-    background: var(--black-alt);
+    background: var(--white-alt);
     border-color: var(--gray-alt);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
 }
 
-body.dark .eco-report-header h1,
-body.dark .report-card h3,
+body.dark .eco-report-header .badge {
+    color: var(--primary);
+}
+
+body.dark .eco-report-header h1 {
+    color: var(--black);
+}
+
+body.dark .eco-report-header p {
+    color: var(--gray-muted);
+}
+
+body.dark .report-card h3 {
+    color: var(--black);
+    border-bottom-color: var(--gray-alt);
+}
+
 body.dark .form-group label {
-    color: var(--white-alt);
+    color: var(--black-alt);
 }
 
 body.dark .form-control {
-    background: var(--black);
-    border-color: var(--gray-muted);
-    color: var(--white-alt);
+    background: var(--gray);
+    border-color: var(--gray-alt);
+    color: var(--black);
+}
+
+body.dark .form-control::placeholder {
+    color: var(--gray-muted);
+}
+
+body.dark .select-selected {
+    background: var(--gray);
+    border-color: var(--gray-alt);
+    color: var(--black);
 }
 
 body.dark .select-items {
-    background: var(--black);
-    border-color: var(--gray-muted);
+    background: var(--gray);
+    border-color: var(--gray-alt);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
 
 body.dark .select-items div {
-    color: var(--white-alt);
+    color: var(--black);
+    background-color: var(--gray);
+}
+
+body.dark .select-items div:hover,
+body.dark .same-as-selected {
+    background-color: var(--primary) !important;
+    color: #fff !important;
 }
 
 body.dark select.form-control {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-color: var(--gray);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c8d8e8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    color: var(--black);
 }
 
 body.dark .dropzone {
-    background: var(--black);
-    border-color: var(--gray-muted);
+    background: var(--gray);
+    border-color: var(--gray-alt);
+    color: var(--gray-muted);
+}
+
+body.dark .dropzone .icon {
+    color: var(--primary);
+}
+
+body.dark .dropzone .text span,
+body.dark .dropzone .hint {
+    color: var(--gray-muted);
+}
+
+body.dark .btn-gps {
+    background: rgba(0, 200, 138, 0.15);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+body.dark .map-description {
+    color: var(--gray-muted);
 }
 
 body.dark .map-legend {
     border-color: var(--gray-alt);
 }
 
-body.dark .btn-gps {
-    background: rgba(0, 122, 85, 0.2);
+body.dark .legend-item {
+    background: var(--gray);
+    border-color: var(--gray-alt);
+    color: var(--black-alt);
+}
+
+/* Drop Off */
+
+body.dark .dropoff-wrapper {
+    background: var(--white);
+}
+
+body.dark .dropoff-header h1 {
+    color: var(--black);
+}
+
+body.dark .conversion-card {
+    background: var(--white-alt);
+    border-color: var(--gray-alt);
+}
+
+body.dark .conversion-card-header {
+    border-bottom-color: var(--gray-alt);
+}
+
+body.dark .conversion-card-header h3 {
+    color: var(--black);
+}
+
+body.dark .conversion-item {
+    background: var(--gray);
+    border-color: var(--gray-alt);
+}
+
+body.dark .conv-icon {
+    background: var(--white-alt);
+}
+
+body.dark .slider-header h3 {
+    color: var(--black);
+}
+
+body.dark .slider-btn {
+    background: var(--white-alt);
+    border-color: var(--gray-alt);
+    color: var(--black);
 }
